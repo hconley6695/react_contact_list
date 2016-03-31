@@ -3,24 +3,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './list';
 import DetailedInfo from './details';
+import contacts from './data';
 
 
 
-function renderList() {
 
-	ReactDOM.render(
-		<List/> /*onSelect={renderDetailedInfo}/>*/,
-		document.querySelector('.app')
-	);
-}
-
-function renderDetailedInfo(person){
+let renderDetailedInfo = (person) => {
 
 	ReactDOM.render(
-		<DetailedInfo/> /* onSelect={renderList} single={person}/>*/,
+		<DetailedInfo  user={person} onReturn={renderList}/>, /* onSelect={renderList} single={person}/>*/
 		document.querySelector('.app')
 	);
 
 }
+
+
+
+
+let renderList = () => {
+
+	ReactDOM.render(
+		<List contacts={contacts} onSelectPerson={renderDetailedInfo}/>, /*onSelect={renderDetailedInfo}/>*/
+		document.querySelector('.app')
+	);
+}
+
 
 renderList();

@@ -1,23 +1,34 @@
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import contacts from './data';
 
 export default class DetailedInfo extends Component {
+	static propTypes = {
+		user: PropTypes.shape ({
+			fullName: PropTypes.string.isRequired,
+			email: PropTypes.string.isRequired,
+			telephone: PropTypes.string.isRequired,
+			location: PropTypes.string.isRequired,
+			url: PropTypes.string.isRequired
+		}).isRequired,
+		onReturn: PropTypes.func.isRequired
+	}
+
 	render() {
-	// {
-	//   var details = contacts.map((item) => {
-	//   	return 
-
-
-	//   })
+	  let { user, onReturn } =this.props;		
 
 	  return (
 		<div className="single_view">
-			<img src="https://upload.wikimedia.org/wikipedia/en/4/44/HarryPotter5poster.jpg"></img>
-  			<span className="full_name">  </span>
-  			<span className="email">  </span>
-  			<span className="telephone">  </span>
-  			<span className="location">  </span>
+			<div className="top_box">
+				<button onClick={onReturn}></button>
+				<img src={user.url} alt={user.fullName}/>
+			</div>
+			<ul className="details_list">
+				<li><i className="fa fa-user"></i> {user.fullName} </li>
+				<li><i className="fa fa-envelope"></i> {user.email}  </li>
+				<li><i className="fa fa-mobile"></i> {user.telephone} </li>
+				<li><i className="fa fa-globe"></i> {user.location} </li>
+			</ul>
   		</div>
 	  );
 	}
