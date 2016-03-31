@@ -1,6 +1,6 @@
 
 
-var Contacts = [
+export default Contacts = [
 	
 	{
 		fullName: 'Harry Potter',
