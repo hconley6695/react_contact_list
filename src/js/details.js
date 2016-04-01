@@ -20,7 +20,7 @@ export default class DetailedInfo extends Component {
 	  return (
 		<div className="single_view">
 			<div className="top_box">
-				<button onClick={onReturn}></button>
+				<button onClick={onReturn}><i className="fa fa-arrow-left"></i></button>
 				<img src={user.url} alt={user.fullName}/>
 			</div>
 			<ul className="details_list">

@@ -18,8 +18,6 @@ let renderDetailedInfo = (person) => {
 }
 
 
-
-
 let renderList = () => {
 
 	ReactDOM.render(

@@ -1,7 +1,104 @@
 /* CSS Entry Point */
 @import 'font-awesome';
 
+.app {
+	font-family: Arial;
+	font-weight: bold;
+}
+
+.list_view, .single_view{
+	border: 1px solid black;
+	height: 450px;
+	width: 450px;
+}
+
+
+h2 {
+	padding-left: 150px;
+	background-color: #6e7077;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+
+}
+
+.img-circle {
+	border-radius: 25px;
+
+}
+
 img {
-	height: 30px;
+	height: 50px;
+	width: 50px;
 	padding-right: 20px;
 }
+
+ul.contact_list {
+	padding-left: 0;
+	margin-top: 0;
+
+}
+
+li	{
+	list-style-type: none;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-top: 1px solid black;
+}
+
+.top_box {
+	height: 200px;
+	position: relative;
+	i {
+		border: none;
+		font-size: 20px;
+		font-weight: normal;
+	}
+}
+
+.top_box img {
+	position: absolute;
+	top: 50px;
+	left: 170px;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+ul.details_list {
+	padding-left: 0;
+	li {
+		font-weight: normal;
+		padding-left: 20px; 
+	}
+	i {
+		padding-right: 20px;
+	}
+
+
+}
+
+	button {
+		border: none;
+	}
+//.details_list 
+// <div className="list_view">
+// 	  		<h1> My Contacts </h1>
+// 	  		<ul className="contact_list"> 
+// 	  		<li>
+
+// <div className="single_view">
+// 			<div className="top_box">
+// 				<button onClick={onReturn}></button>
+// 				<img src={user.url} alt={user.fullName}/>
+// 			</div>
+// 			<ul className="details_list">
+// 				<li><i className="fa fa-user"></i> {user.fullName} </li>
+// 				<li><i className="fa fa-envelope"></i> {user.email}  </li>
+// 				<li><i className="fa fa-mobile"></i> {user.telephone} </li>
+// 				<li><i className="fa fa-globe"></i> {user.location} </li>
+
+

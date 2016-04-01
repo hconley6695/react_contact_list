@@ -22,7 +22,7 @@ export default class List extends Component {
 	selectPerson(person) {	
 		let {onSelectPerson} = this.props;
 		return (
-			<li key={person.fullName} onClick={onSelectPerson.bind(null, person)}> {person.fullName} </li>
+			<li key={person.fullName} onClick={onSelectPerson.bind(null, person)}><img src={person.url} className="img-circle"/> {person.fullName} </li>
 		);
 	}
 
@@ -33,12 +33,13 @@ export default class List extends Component {
 
 	  return (
 	  	<div className="list_view">
-	  		<h1> My Contacts </h1>
+	  		<h2> My Contacts </h2>
+
 	  		<ul className="contact_list"> {contacts.map(::this.selectPerson)}</ul>
 	  	</div>
 	  );
 
 	}
 
-
+	  		/*<img src="http://static2.hypable.com/wp-content/uploads/2014/09/Hogwarts-lake.png"/>*/
 }
