@@ -6,12 +6,17 @@
 	font-weight: bold;
 }
 
-.list_view, .single_view{
+.list_view {
 	border: 1px solid black;
 	height: 450px;
 	width: 450px;
 }
 
+.single_view {
+	border: 1px solid black;
+	height: 450px;
+	width: 450px;
+}
 
 h2 {
 	padding-left: 150px;
@@ -51,10 +56,12 @@ li	{
 .top_box {
 	height: 200px;
 	position: relative;
+	background-color: #6e7077;
 	i {
 		border: none;
 		font-size: 20px;
 		font-weight: normal;
+
 	}
 }
 
@@ -70,9 +77,13 @@ li	{
 
 ul.details_list {
 	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 	li {
 		font-weight: normal;
 		padding-left: 20px; 
+		padding-bottom: 20px;
+		padding-top: 20px;
 	}
 	i {
 		padding-right: 20px;
