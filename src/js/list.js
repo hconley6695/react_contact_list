@@ -34,9 +34,11 @@ export default class List extends Component {
 
 	  return (
 	  	<div className="list_view">
-	  		<h2> My Contacts </h2>
-	  		<button onClick={onNew}>Add a Contact </button>
+	  			  	  		
+	  		<h2> My Contacts<button onClick={onNew}>Add a Contact </button> </h2>
+
 	  		<ul className="contact_list"> {contacts.map(::this.selectPerson)}</ul>
+	
 	  	</div>
 	  );
 

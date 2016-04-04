@@ -18,27 +18,27 @@ export default class FormView extends Component {
 			<SimpleSerialForm onData={::this.passData}>
 				<div>
 					<label>Full Name:
-						<input type="text" name="fullName"/>
+						<input type="text" name="fullName" id="nameperson"/>
 					</label>
 				</div>
 				<div>
 					<label>Email Address: 
-						<input type="email" name="email"/>
+						<input type="email" name="email" id="emailperson"/>
 					</label>
 				</div>
 				<div>
 					<label>Telephone:
-						<input type="tel" name="telephone"/>
+						<input type="tel" name="telephone" id="telperson"/>
 					</label>
 				</div>
 				<div>
 					<label>Location:
-						<input type="text" name="location"/>
+						<input type="text" name="location" id="locationperson"/>
 					</label>
 				</div>
 				<div>
 					<label>Link to Profile Picture:
-						<input type="text" name="url"/>
+						<input type="text" name="url" id="urlperson"/>
 					</label>
 				</div>
 				<button>Submit</button>

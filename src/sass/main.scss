@@ -26,17 +26,23 @@ h2 {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	color: white;
-
+	position: relative;
+	button {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	border: .25px solid black;
+	border-radius: 5px;
+	background-color: white;	
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	}
 }
 
 .img-circle {
 	height: 50px;
 	border-radius: 50px;
-	// border-bottom-right-radius: 50px;
-	// border-bottom-left-radius: 50px;
-	// border-top-right-radius: 50px;
-	// border-top-left-radius: 50px;
-
 }
 
 img {
@@ -78,10 +84,7 @@ li	{
 	width: 100px;
 	font-size: 18px;
 	border-radius: 50px;
-	// border-bottom-right-radius: 50px;
-	// border-bottom-left-radius: 50px;
-	// border-top-right-radius: 50px;
-	// border-top-left-radius: 50px;
+
 }
 
 ul.details_list {
@@ -97,13 +100,55 @@ ul.details_list {
 	i {
 		padding-right: 20px;
 	}
-
-
-}
-
 	button {
 		border: none;
 	}
+}
+
+.contact_info {
+	position: relative;
+}
+#nameperson, #emailperson, #telperson, #locationperson, #urlperson {
+	height: 30px;
+	width: 250px;	
+	color: #777777;
+	font-size: 14px;
+	padding-left: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+
+.contact_info {
+	position: relative;
+
+	button {
+	height: 20px;
+	width: 80px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	border: .25px solid black;
+	border-radius: 5px;
+	background-color: white;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	}	
+}
+// button {
+// 	font-family: Arial;
+// 	font-weight: bold;
+// 	font-size: 14px;
+// 	border: .25px solid black;
+// 	border-radius: 5px;
+// 	background-color: red;
+
+// }
+
+
+
 //.details_list 
 // <div className="list_view">
 // 	  		<h1> My Contacts </h1>
