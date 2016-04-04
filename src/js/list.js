@@ -15,7 +15,8 @@ export default class List extends Component {
 
 	static propTypes = {
 		contacts: PropTypes.array.isRequired,
-		onSelectPerson: PropTypes.func.isRequired
+		onSelectPerson: PropTypes.func.isRequired,
+		onNew: PropTypes.func.isRequired
 	}
 
 
@@ -29,12 +30,12 @@ export default class List extends Component {
 
 
 	render() {
-		let {contacts, onSelectPerson} = this.props;
+		let {contacts, onSelectPerson, onNew} = this.props;
 
 	  return (
 	  	<div className="list_view">
 	  		<h2> My Contacts </h2>
-
+	  		<button onClick={onNew}>Add a Contact </button>
 	  		<ul className="contact_list"> {contacts.map(::this.selectPerson)}</ul>
 	  	</div>
 	  );

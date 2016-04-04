@@ -8,7 +8,6 @@ export default class FormView extends Component {
 
 	passData(newContactData) {
 		this.props.onAdd(newContactData);
-
 	}
 
 	render() {
@@ -16,15 +15,15 @@ export default class FormView extends Component {
 		return (
 			<div className="contact_info">
 			<h2>Add a Contact</h2>
-			<SimpleSerialForm onData=(this.passData)>
+			<SimpleSerialForm onData={::this.passData}>
 				<div>
 					<label>Full Name:
-						<input type="text" name="fullname"/>
+						<input type="text" name="fullName"/>
 					</label>
 				</div>
 				<div>
 					<label>Email Address: 
-						<input type="email" name="email_address"/>
+						<input type="email" name="email"/>
 					</label>
 				</div>
 				<div>
@@ -39,23 +38,14 @@ export default class FormView extends Component {
 				</div>
 				<div>
 					<label>Link to Profile Picture:
-						<input type="text" name="profile_pic"/>
+						<input type="text" name="url"/>
 					</label>
 				</div>
 				<button>Submit</button>
 
 
 			</SimpleSerialForm>
-
-
-
-
-
 			</div>
-
-
-			)
-
-
+			);
 	}
 }
