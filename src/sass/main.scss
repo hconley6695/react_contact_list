@@ -108,7 +108,7 @@ ul.details_list {
 .contact_info {
 	position: relative;
 }
-#nameperson, #emailperson, #telperson, #locationperson, #urlperson {
+#nameperson, #emailperson, #telperson, #locationperson {
 	height: 25px;
 	width: 325px;	
 	color: #777777;
@@ -122,11 +122,6 @@ ul.details_list {
 
 .contact_info {
 	position: relative;
-	// .label {
-	// 	position: absolute;
-	// 	top: 2px;
-	// 	left: 5px;
-	// }
 	button {
 	height: 20px;
 	width: 80px;
@@ -140,6 +135,11 @@ ul.details_list {
 	bottom: 5px;
 	right: 5px;
 	}	
+}
+
+.adjust_img {
+	margin-left: 0;
+	margin-right: 0;
 }
 // button {
 // 	font-family: Arial;
