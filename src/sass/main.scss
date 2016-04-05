@@ -40,16 +40,18 @@ h2 {
 	}
 }
 
-.img-circle {
+// img {
+// 	margin-right: 30px;
+// 	margin-left: 10px;
+
+// }
+
+img.img-circle {
 	height: 50px;
 	border-radius: 50px;
-}
-
-img {
-
 	margin-right: 30px;
 	margin-left: 10px;
-}
+	}
 
 ul.contact_list {
 	padding-left: 0;
@@ -137,9 +139,14 @@ ul.details_list {
 	}	
 }
 
-.adjust_img {
+#urlperson {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.adj_img {
+	margin-left: 125px;
+
 }
 // button {
 // 	font-family: Arial;
