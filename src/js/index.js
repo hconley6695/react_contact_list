@@ -21,7 +21,7 @@ let renderDetailedInfo = (person) => {
 let renderList = () => {
 
 	ReactDOM.render(
-		<List contacts={contacts} onSelectPerson={renderDetailedInfo} onNew={renderForm}/>, 
+		<List contacts={contacts} onSelectPerson={renderDetailedInfo} onNew={renderForm} onEdit={renderForm}/>, 
 		document.querySelector('.app')
 	);
 }
@@ -31,11 +31,15 @@ function addNewContactAndRenderList (newContact) {
 	renderList();
 }
 
+function changeContactInfoAndRenderList (editContact) {
+	contact.splice()
+}
+
 
 function renderForm() {
 
 	ReactDOM.render (
-	<FormView onAdd={addNewContactAndRenderList}/>,
+	<FormView onAdd={addNewContactAndRenderList} onEdit={changeContactInfoAndRenderList}/>,
 	document.querySelector('.app')
 
 	);

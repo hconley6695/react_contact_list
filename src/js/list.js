@@ -16,14 +16,20 @@ export default class List extends Component {
 	static propTypes = {
 		contacts: PropTypes.array.isRequired,
 		onSelectPerson: PropTypes.func.isRequired,
-		onNew: PropTypes.func.isRequired
+		onNew: PropTypes.func.isRequired,
+		onEdit: PropTypes.func.isRequired
 	}
 
 
 	selectPerson(person) {	
-		let {onSelectPerson} = this.props;
+		let {onSelectPerson, onEdit} = this.props;
 		return (
-			<li key={person.fullName} onClick={onSelectPerson.bind(null, person)}><img src={person.url} className="img-circle"/> {person.fullName} </li>
+		  <div>
+			<li key={person.fullName} onClick={onSelectPerson.bind(null, person)}>
+				<img src={person.url} className="img-circle"/> {person.fullName} 
+			</li> 
+			<button onClick={onEdit}>Edit </button>
+		  </div>
 		);
 	}
 

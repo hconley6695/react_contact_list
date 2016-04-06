@@ -1,19 +1,22 @@
 import React, { Component, PropTypes } from 'react';
 import SimpleSerialForm from 'react-simple-serial-form';
 import Dropzone from 'react-dropzone';
+import contacts from './data';
 
 
 export default class FormView extends Component {
 	
 
 	static PropTypes = {
-		onAdd: PropTypes.func.isRequired
+		onAdd: PropTypes.func.isRequired,
+		newNameUser: PropTypes.string.isRequired
 	}
 
 	constructor (props) {
 		super(props);
 		this.state = {
-			preview: 'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png'
+			preview: 'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png',
+			newName: '{user.fullName}'
 		}
 	}
 
@@ -21,10 +24,19 @@ export default class FormView extends Component {
 		this.props.onAdd(newContactData);
 	}
 
+	changeHandler(event) {
+		let {value} = event.target;
+		let {newNameUser} = this.props;
+//		let newName = newNameUser
+//		this.setState({newName: newContactData.newName});
+	}
+
 	dropHandler([file]) {
 		console.log(file);
 		this.setState({preview: file.preview});
 	}
+
+
 
 	render() {
 		let {onAdd} = this.props;
@@ -40,7 +52,7 @@ export default class FormView extends Component {
 				</div>
 				<div>
 					<label className="label">Full Name:
-						<input type="text" name="fullName" id="nameperson"/>
+						<input type="text" name="fullName" id="nameperson" onChange={::this.changeHandler}/>
 					</label>
 				</div>
 				<div>
