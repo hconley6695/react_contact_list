@@ -9,7 +9,7 @@ export default class FormView extends Component {
 
 	static PropTypes = {
 		onAdd: PropTypes.func.isRequired,
-		newNameUser: PropTypes.string.isRequired
+	//	newNameUser: PropTypes.string.isRequired
 	}
 
 	constructor (props) {

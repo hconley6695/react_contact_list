@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './list';
 import DetailedInfo from './details';
-import contacts from './data';
+import contactsfromdata from './data';
 import FormView from './form_view';
 import Dropzone from 'react-dropzone';
 
@@ -21,7 +21,7 @@ let renderDetailedInfo = (person) => {
 let renderList = () => {
 
 	ReactDOM.render(
-		<List contacts={contacts} onSelectPerson={renderDetailedInfo} onNew={renderForm} onEdit={renderForm}/>, 
+		<List contacts={contactsfromdata} onSelectPerson={renderDetailedInfo} onNew={renderForm} /*onEdit={renderForm}*//>, 
 		document.querySelector('.app')
 	);
 }
@@ -39,7 +39,7 @@ function changeContactInfoAndRenderList (editContact) {
 function renderForm() {
 
 	ReactDOM.render (
-	<FormView onAdd={addNewContactAndRenderList} onEdit={changeContactInfoAndRenderList}/>,
+	<FormView onAdd={addNewContactAndRenderList} /*onEdit={changeContactInfoAndRenderList}*//>,
 	document.querySelector('.app')
 
 	);
