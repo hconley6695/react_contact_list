@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Route, Router, hashHistory } from 'react-router';
 import SimpleSerialForm from 'react-simple-serial-form';
 import Dropzone from 'react-dropzone';
 import contacts from './data';
@@ -7,29 +8,19 @@ import contacts from './data';
 export default class FormView extends Component {
 	
 
-	static PropTypes = {
-		onAdd: PropTypes.func.isRequired,
-	//	newNameUser: PropTypes.string.isRequired
-	}
-
 	constructor (props) {
 		super(props);
 		this.state = {
 			preview: 'http://sunfieldfarm.org/wp-content/uploads/2014/02/profile-placeholder.png',
-			newName: '{user.fullName}'
 		}
 	}
 
 	passData(newContactData) {
-		this.props.onAdd(newContactData);
+
+		contacts.push(newContactData);
+		hashHistory.push('/');
 	}
 
-	changeHandler(event) {
-		let {value} = event.target;
-		let {newNameUser} = this.props;
-//		let newName = newNameUser
-//		this.setState({newName: newContactData.newName});
-	}
 
 	dropHandler([file]) {
 		console.log(file);
@@ -39,7 +30,7 @@ export default class FormView extends Component {
 
 
 	render() {
-		let {onAdd} = this.props;
+
 		return (
 			<div className="contact_info">
 			<h2>Add a Contact</h2>
@@ -52,7 +43,7 @@ export default class FormView extends Component {
 				</div>
 				<div>
 					<label className="label">Full Name:
-						<input type="text" name="fullName" id="nameperson" onChange={::this.changeHandler}/>
+						<input type="text" name="fullName" id="nameperson"/>
 					</label>
 				</div>
 				<div>
@@ -75,6 +66,10 @@ export default class FormView extends Component {
 
 			</SimpleSerialForm>
 			</div>
-			);
+		);
 	}
 }
+	// static PropTypes = {
+	// 	onAdd: PropTypes.func.isRequired,
+
+	// }		// let {onAdd} = this.props;

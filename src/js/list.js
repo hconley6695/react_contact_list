@@ -1,54 +1,52 @@
 import React, { Component, PropTypes } from 'react';
+import { Route, Router, hashHistory, Link } from 'react-router';
 import contacts from './data';
+import SimpleSerialForm from 'react-simple-serial-form';
 
 
-// function makeList(nameOfPerson) {
-// 	return `<div className="person">
-//	  		<img src="https://upload.wikimedia.org/wikipedia/en/4/44/HarryPotter5poster.jpg"/>
-//				Harry Potter
-//	  		</div>`
-// }
-
-//	  		contacts.fullName.map(makeList);
 export default class List extends Component {	
 
+	// static propTypes = {
+	// 	contacts: PropTypes.array.isRequired,
+	// //	onSelectPerson: PropTypes.func.isRequired,
+	// //	onNew: PropTypes.func.isRequired
+	// }
 
-	static propTypes = {
-		contacts: PropTypes.array.isRequired,
-		onSelectPerson: PropTypes.func.isRequired,
-		onNew: PropTypes.func.isRequired,
-		onEdit: PropTypes.func.isRequired
+// onClick={onSelectPerson.bind(null, person)}
+	 selectPerson(person) {	
+	// 	let {onSelectPerson, onEdit} = this.props;
+	 	return (
+	 	  <div>
+	 		<li key={person.fullName}>
+	 			<img src={person.url} className="img-circle"/> {person.fullName} 
+	 		</li> 
+	 	  </div>
+	 	);
+			hashHistory.push('/'); 
+		}
+
+	// onSelectPerson(data) {
+	// 	contacts.push(data);
+	// 	hashHistory.push('/detailsofcontact');
+	// }
+
+	addPerson() {
+		hashHistory.push('/addnewcontact');
 	}
-
-
-	selectPerson(person) {	
-		let {onSelectPerson, onEdit} = this.props;
-		return (
-		  <div>
-			<li key={person.fullName} onClick={onSelectPerson.bind(null, person)}>
-				<img src={person.url} className="img-circle"/> {person.fullName} 
-			</li> 
-			<button onClick={onEdit}>Edit </button>
-		  </div>
-		);
-	}
-
 
 
 	render() {
-		let {contacts, onSelectPerson, onNew} = this.props;
+		// let {contacts} = this.props;
 
 	  return (
 	  	<div className="list_view">
-	  			  	  		
-	  		<h2> My Contacts<button onClick={onNew}>Add a Contact </button> </h2>
 
-	  		<ul className="contact_list"> {contacts.map(::this.selectPerson)}</ul>
-	
+	  			  	  		
+	  		<h2> My Contacts<button onClick={this.addPerson} >Add a Contact </button> </h2>
+
+	  		<ul className="contact_list"> {contacts.map(this.selectPerson)}</ul>
+	  	  	
 	  	</div>
 	  );
-
 	}
-
-	  		/*<img src="http://static2.hypable.com/wp-content/uploads/2014/09/Hogwarts-lake.png"/>*/
 }
