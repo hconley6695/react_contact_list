@@ -1,62 +1,29 @@
 // Javascript Entry Point
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Router, hashHistory } from 'react-router';
+import { Route, Router, hashHistory, IndexRoute } from 'react-router';
 import List from './list';
 import DetailedInfo from './details';
 import contactsfromdata from './data';
 import FormView from './form_view';
 import Dropzone from 'react-dropzone';
-
-
-// let renderDetailedInfo = (person) => {
-
-// 	ReactDOM.render(
-// 		<DetailedInfo  user={person} onReturn={renderList}/>, 
-// 		document.querySelector('.app')
-// 	);
-
-// }
-
-
-// let renderList = () => {
-
-// 	ReactDOM.render((
-// 		 <List contacts={contactsfromdata} onSelectPerson={renderDetailedInfo} onNew={renderForm} />, 
-// 		  document.querySelector('.app')
-
-// 		)
-
-// 	);
-// }
-
-
-
-// function renderForm() {
-
-// 	ReactDOM.render (
-// 	<FormView onAdd={addNewContactAndRenderList}/>,
-// 	document.querySelector('.app')
-
-// 	);
-// }
-
-
-// function addNewContactAndRenderList (newContact) {
-// 	contacts.push(newContact);
-// 	renderList();
-// }
+import Main from './main.js';
+import Home from './home.js';
+import AdditionalInfo from './additional_info';
 
 
 
 
-//renderList();
 
 ReactDOM.render((
 	<Router history={hashHistory}>
-		<Route path="/" component={List}/>
-		<Route path="/detailsofcontact" component={DetailedInfo}/>
+	  <Route path="/" component={Main}>
+		<IndexRoute component={Home}/>
+		<Route path="/contactlist" component={List}/>
+		<Route path="/detailsofcontact/:each" component={DetailedInfo}/>
 		<Route path="/addnewcontact" component={FormView}/>
+		<Route path="/magicinformation" component={AdditionalInfo}/>
+	  </Route>	
 	</Router>
 	), document.querySelector('.app'));
 

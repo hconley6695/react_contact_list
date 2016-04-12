@@ -4,8 +4,28 @@
 .app {
 	font-family: Arial;
 	font-weight: bold;
-	border: 1px solid black;
-	width: 450px;
+	// border: 1px solid black;
+	width: 100%;
+}
+.main img {
+	margin-left: 20%;
+}
+
+header {
+	background-color: #6e8aab;
+	// span {
+		
+	// }
+}
+
+aside {
+	float: left;
+	width: 18%;
+}
+
+.main_section {
+	float: right;
+	width: 78%;
 }
 
 .list_view {
@@ -40,11 +60,6 @@ h2 {
 	}
 }
 
-// img {
-// 	margin-right: 30px;
-// 	margin-left: 10px;
-
-// }
 
 img.img-circle {
 	height: 50px;
@@ -148,33 +163,3 @@ ul.details_list {
 	margin-left: 125px;
 
 }
-// button {
-// 	font-family: Arial;
-// 	font-weight: bold;
-// 	font-size: 14px;
-// 	border: .25px solid black;
-// 	border-radius: 5px;
-// 	background-color: red;
-
-// }
-
-
-
-//.details_list 
-// <div className="list_view">
-// 	  		<h1> My Contacts </h1>
-// 	  		<ul className="contact_list"> 
-// 	  		<li>
-
-// <div className="single_view">
-// 			<div className="top_box">
-// 				<button onClick={onReturn}></button>
-// 				<img src={user.url} alt={user.fullName}/>
-// 			</div>
-// 			<ul className="details_list">
-// 				<li><i className="fa fa-user"></i> {user.fullName} </li>
-// 				<li><i className="fa fa-envelope"></i> {user.email}  </li>
-// 				<li><i className="fa fa-mobile"></i> {user.telephone} </li>
-// 				<li><i className="fa fa-globe"></i> {user.location} </li>
-
-
