@@ -18,7 +18,9 @@ export default class List extends Component {
 	 	return (
 	 	  <div>
 	 		<li key={person.fullName}>
+	 		<Link to="/detailsofcontact">
 	 			<img src={person.url} className="img-circle"/> {person.fullName} 
+	 		</Link>
 	 		</li> 
 	 	  </div>
 	 	);
