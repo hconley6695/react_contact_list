@@ -6,7 +6,7 @@ export default class Home extends Component {
 		return (
 			<div className="home_paragraph">
 				<h2>Welcome to all things magical...</h2>
-				<br/>
+
 				<p>Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak
 				 three-headed Dog. Half-Blood Prince Invisibility Cloak cauldron cakes, hiya Harry! 
 				 Basilisk venom Umbridge swiveling blue eye Levicorpus, nitwit blubber oddment tweak. 

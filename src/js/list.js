@@ -21,7 +21,7 @@ export default class List extends Component {
 
 	 	  </div>
 	 	);
-			hashHistory.push('/'); 
+			hashHistory.push('/contactlist'); 
 		}
 
 
@@ -35,12 +35,13 @@ export default class List extends Component {
 	  return (
 	  	<div className="list_view">
 	  	  		
-	  		<h3> Current Contacts </h3>
+	  		<h3> CURRENT CONTACTS </h3>
 
 	  		<ul className="contact_list"> {contacts.map(this.selectPerson)}</ul>
 	  	  	
-	  	  	<button onClick={this.addPerson} >Add a Contact </button>
+
 	  	</div>
 	  );
 	}
 }
+	  	  	// <button onClick={this.addPerson} >Add a Contact </button>

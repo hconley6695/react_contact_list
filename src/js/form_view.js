@@ -37,31 +37,40 @@ export default class FormView extends Component {
 			<SimpleSerialForm onData={::this.passData}>
 				<div className="adj_img">
 					<Dropzone onDrop={::this.dropHandler}>
+					<div className="dropimage">
 						<img src={this.state.preview} width="200" height="200"/>
 						<input type="hidden" name="url" value={this.state.preview} id="urlperson"/>
+					</div>
 					</Dropzone>
 				</div>
+				<br/>
 				<div>
 					<label className="label">Full Name:
 						<input type="text" name="fullName" id="nameperson"/>
 					</label>
 				</div>
+				<br/>
 				<div>
 					<label className="label">Email Address: 
 						<input type="email" name="email" id="emailperson"/>
 					</label>
 				</div>
+				<br/>
 				<div>
 					<label className="label">Telephone:
 						<input type="tel" name="telephone" id="telperson"/>
 					</label>
 				</div>
+				<br/>
 				<div>
 					<label className="label">Location:
 						<input type="text" name="location" id="locationperson"/>
 					</label>
 				</div>
-				<button>Submit</button>
+				<br/>
+				<div className="addcontactbutton">
+					<button>Submit</button>
+				</div>
 
 
 			</SimpleSerialForm>

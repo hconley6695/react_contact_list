@@ -23,7 +23,7 @@ export default class Main extends Component {
 				<div className="main_section">
 					{this.props.children}
 				</div>	
-				<footer>FOOTER TEXT HERE</footer>
+				<footer></footer>
 
 			</div>
 
