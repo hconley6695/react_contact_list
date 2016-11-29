@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {   Route, Router, hashHistory, Link } from 'react-router';
-import contacts from './data';
+//import contacts from './data';
 
 
 
