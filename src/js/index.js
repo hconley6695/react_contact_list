@@ -27,3 +27,5 @@ ReactDOM.render((
 	</Router>
 	), document.querySelector('.app'));
 
+// PROJECT IS DEPLOYED AT LINK BELOW:
+	// tiy-2016q1-charlesconley-react_contact_list.surge.sh
